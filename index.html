@@ -4,15 +4,74 @@
   <meta charset="UTF-8">
   <title>Nomado</title>
   <link rel="manifest" href="manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#F44336">
+  <style>
+    body{
+      margin: 0;
+      background-color: #353A49;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    .navbar{
+      height: 60px;
+      text-align: center;
+    }
+    .container{
+      margin: 0 auto;
+      width: 95%;
+    }
+    .card{
+      background-color: white;
+      border-radius: 3px;
+      padding: 15px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 14px;
+      color: #666;
+    }
+    .card h3 {
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h2>Sign in</h2>
-  <form id="login-form" novalidate>
-    <input type="email" placeholder="email" id="email">
-    <input type="password" placeholder="password" id="password">
-    <input type="submit" value="Submit">
-  </form>
-  <script src="app.js"></script>
+  <div class="navbar">
+    <img src="images/nomado192.png" alt="Nomado" width="35" style="padding-top: 15px;">
+  </div>
+  <div class="container">
+    <div class="card">
+      <h3>June trip</h3>
+      <p>Lisbon, Amsterdam, Bucharest</p>
+    </div>
+    <div class="card">
+      <h3>June trip</h3>
+      <p>Lisbon, Amsterdam, Bucharest</p>
+    </div>
+    <div class="card">
+      <h3>Summer 2017</h3>
+      <p>Lisbon, Amsterdam, Bucharest</p>
+    </div>
+    <div class="card">
+      <h3>Business 2015</h3>
+      <p>Lisbon, Amsterdam, Bucharest</p>
+    </div>
+    <div class="card">
+      <h3>August trip</h3>
+      <p>Lisbon, Amsterdam, Bucharest</p>
+    </div>
+  </div>
+  <script>
+    if("serviceWorker" in navigator){
+      navigator.serviceWorker.register("service-worker.js")
+      .then(function(){
+        console.log("Service worker registered successfully.");
+      })
+      .catch(function(){
+        console.log("Service worker not registered.");
+      })
+    }
+  </script>
 </body>
 </html>
