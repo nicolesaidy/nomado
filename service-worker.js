@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["images/nomado192.png","bbd07bd7ec9d2064ae5be1b5b2b00135"],["index.html","aa965a6b30c678bea26c69f5bee6b1bf"]];
+var precacheConfig = [["images/nomado192.png","bbd07bd7ec9d2064ae5be1b5b2b00135"],["index.html","1efdeec42602d3d060238491570c2faf"],["shell.js","632c35a3395c93d2f11aeb24b7cf9e58"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 

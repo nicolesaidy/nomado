@@ -9,7 +9,7 @@
   <style>
     body{
       margin: 0;
-      background-color: #353A49;
+      background-color: #F44336;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
     .navbar{
@@ -34,14 +34,22 @@
     .card h3 {
       margin-top: 10px;
     }
+    body{
+      transition: background-color 700ms;
+    }
+    body.offline
+    {
+      background-color: #353A49;
+    }
   </style>
 </head>
 <body>
   <div class="navbar">
     <img src="images/nomado192.png" alt="Nomado" width="35" style="padding-top: 15px;">
   </div>
-  <div class="container">
-    <div class="card">
+  <div class="container" id="trips">
+    <div class="card">Loading...</div>
+    <!-- <div class="card">
       <h3>June trip</h3>
       <p>Lisbon, Amsterdam, Bucharest</p>
     </div>
@@ -60,8 +68,10 @@
     <div class="card">
       <h3>August trip</h3>
       <p>Lisbon, Amsterdam, Bucharest</p>
-    </div>
+    </div> -->
   </div>
+  <script async src="shell.js"></script>
+  <script async src="app.js"></script>
   <script>
     if("serviceWorker" in navigator){
       navigator.serviceWorker.register("service-worker.js")
