@@ -11,3 +11,15 @@ window.addEventListener('online', function(){
 if (!navigator.onLine){
   offlineMode();
 }
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(function(response){
+  return response.json();
+})
+.then(function(users){
+  var listUsers = document.querySelector("#trips");
+  listUsers.innerHTML = "";
+  users.forEach(function(user){
+    listUsers.innerHTML += "<div class='card'> <h3>" + user.name + "</h3> <p>" + user.address.city + "</p> </div>";
+  })
+});
