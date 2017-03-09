@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["images/nomado192.png","bbd07bd7ec9d2064ae5be1b5b2b00135"],["index.html","1efdeec42602d3d060238491570c2faf"],["shell.js","a4d24c4c8b5a2bf73be5006c8dcc1528"]];
+var precacheConfig = [["images/nomado192.png","bbd07bd7ec9d2064ae5be1b5b2b00135"],["index.html","04090994974e229705540d27bc6cb0b4"],["shell.js","beb067ff0b19d4944ae4b6180e7a009a"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
@@ -283,7 +283,7 @@ self.addEventListener('fetch', function(event) {
 
 // Runtime cache configuration, using the sw-toolbox library.
 
-toolbox.router.get(/jsonplaceholder\.typicode\.com\/users/, toolbox.fastest, {});
+toolbox.router.get(/jsonplaceholder\.typicode\.com/, toolbox.cacheFirst, {});
 
 
 

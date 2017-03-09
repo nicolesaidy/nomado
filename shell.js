@@ -12,14 +12,15 @@ if (!navigator.onLine){
   offlineMode();
 }
 
-fetch("https://jsonplaceholder.typicode.com/users")
+//fetch the json object
+fetch("https://jsonplaceholder.typicode.com/posts")
 .then(function(response){
   return response.json();
 })
-.then(function(users){
-  var listUsers = document.querySelector("#trips");
-  listUsers.innerHTML = "";
-  users.forEach(function(user){
-    listUsers.innerHTML += "<div class='card'> <h3>" + user.name + "</h3> <p>" + user.address.city + "</p> </div>";
-  })
+.then(function(data){
+  var trips = document.querySelector("#trips");
+  trips.innerHTML = "";
+  data.forEach(function(user){
+    trips.innerHTML += "<div class='card'><h3>" + user.title + "</h3>" + "<p>" + user.body + "</p></div>";
+  });
 });

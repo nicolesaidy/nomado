@@ -1,11 +1,11 @@
 module.exports = {
   staticFileGlobs: [
-    'index.html',
-    'images/**',
-    'shell.js'
+  'index.html',
+  'images/**',
+  'shell.js'
   ],
   runtimeCaching: [{
-    urlPattern: /jsonplaceholder\.typicode\.com\/users/,
+    urlPattern: /jsonplaceholder\.typicode\.com/,
     handler: 'cacheFirst'
   }]
 }
