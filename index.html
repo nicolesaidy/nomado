@@ -4,42 +4,36 @@
   <meta charset="UTF-8">
   <title>Nomado</title>
   <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="flexboxgrid.min.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="card.css">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="images/launch.png">
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#F44336">
-
   <meta name="application-name" content="Nomado">
   <meta name="apple-mobile-web-app-title" content="Nomado">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+
   <style>
     body{
       margin: 0;
       background-color: #F44336;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, RobotoRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
     .navbar{
-      height: 60px;
+      font-size: 17px;
+      color: white;
+      height: 50px;
       text-align: center;
-    }
-    .container{
-      margin: 0 auto;
-      width: 95%;
-    }
-    .card{
-      background-color: white;
-      border-radius: 3px;
-      padding: 15px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-    .card p {
-      font-size: 14px;
-      color: #666;
-    }
-    .card h3 {
-      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     body{
       transition: background-color 700ms;
@@ -52,29 +46,36 @@
 </head>
 <body>
   <div class="navbar">
-    <img src="images/nomado192.png" alt="Nomado" width="35" style="padding-top: 15px;">
+    My trips
   </div>
-
-  <div class="container" id="trips">
-    <div class="card">
-      <h3>June trip</h3>
-      <p>Lisbon, Amsterdam, Bucharest</p>
+  <div class="container">
+    <div class="grid grid--gutters" id="trips">
+      <div class="grid-cell">
+        <div class="card">
+          <h3>June trip</h3>
+          <p>Lisbon, Amsterdam, Bucharest</p>
+        </div>
+      </div>
+      <div class="grid-cell">
+        <div class="card">
+          <h3>World trip 2</h3>
+          <p>Copenhagen, Madrid, Oslo, Darmstadt, Nurneberg</p>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <h3>June trip</h3>
-      <p>Lisbon, Amsterdam, Bucharest</p>
-    </div>
-    <div class="card">
-      <h3>Summer 2017</h3>
-      <p>Lisbon, Amsterdam, Bucharest</p>
-    </div>
-    <div class="card">
-      <h3>Business 2015</h3>
-      <p>Lisbon, Amsterdam, Bucharest</p>
-    </div>
-    <div class="card">
-      <h3>August trip</h3>
-      <p>Lisbon, Amsterdam, Bucharest</p>
+    <div class="grid grid--gutters" id="trips">
+      <div class="grid-cell">
+        <div class="card">
+          <h3>Winter 2017</h3>
+          <p>Lisbon, Amsterdam, Bucharest</p>
+        </div>
+      </div>
+      <div class="grid-cell">
+        <div class="card">
+          <h3>Summer trip</h3>
+          <p>Lisbon, Amsterdam, Bucharest</p>
+        </div>
+      </div>
     </div>
   </div>
   <script async src="shell.js"></script>

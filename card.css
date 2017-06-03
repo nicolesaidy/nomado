@@ -1,0 +1,25 @@
+.card{
+  background-color: white;
+  border-radius: 3px;
+  padding: .3em 1em 0;
+}
+.card:after {
+    content: '\00a0';
+    display: block;
+    margin-top: 0.6em;
+    height: 0;
+    visibility: hidden;
+}
+.card p {
+  font-size: 14px;
+  color: #666;
+}
+.card h3 {
+  margin-top: 10px;
+}
+p{
+font-family:
+/* 1 */ -apple-system, BlinkMacSystemFont,
+/* 2 */ "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+/* 3 */ "Helvetica Neue", sans-serif;
+}
